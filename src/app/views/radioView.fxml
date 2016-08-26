@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+
+
+<BorderPane fx:controller="app.controllers.RadioController" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <fx:include source="topBar.fxml" fx:id="topBar"/>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER" spacing="200" styleClass="inner">
+            <VBox spacing="75">
+                <HBox spacing="100">
+                    <Label text="Volume" styleClass="medium-header"/>
+                    <Label fx:id="volumeLabel" styleClass="medium-header" prefWidth="50"/>
+                </HBox>
+
+                <HBox styleClass="segmented-button-bar">
+                    <Button text="+" styleClass="first" onAction="#volumeUp" />
+                    <Button text="-" styleClass="last" onAction="#volumeDown" />
+                </HBox>
+                <Label text="Channel" styleClass="medium-header"/>
+                <HBox styleClass="segmented-button-bar">
+                    <Button text="AM" fx:id="AMButton" styleClass="first" onAction="#setAM" />
+                    <Button text="FM" fx:id="FMButton" styleClass="last"  onAction="#setFM" />
+                </HBox>
+            </VBox>
+            <VBox>
+                <HBox alignment="CENTER">
+                    <ListView fx:id="stationList">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList" />
+                        </items>
+                    </ListView>
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <fx:include source="bottomBar.fxml" fx:id="bottomBar"/>
+    </bottom>
+</BorderPane>

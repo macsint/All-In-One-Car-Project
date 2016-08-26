@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import app.models.DriverHistory?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<BorderPane fx:controller="app.controllers.DriverHistController" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <fx:include source="topBar.fxml" fx:id="topBar"/>
+    </top>
+
+    <center>
+        <GridPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <TableView fx:id="driverTableView" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="table-view">
+            <columns>
+                    <TableColumn text="Name" fx:id="name" prefWidth="150.0" styleClass="row-style">
+                        <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Date" fx:id="date" prefWidth="150.0"  styleClass="row-style">
+                        <cellValueFactory><PropertyValueFactory property="date"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Duration (sec)" fx:id="duration" prefWidth="150.0" styleClass="row-style">
+                        <cellValueFactory><PropertyValueFactory property="duration"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Avg. Speed (mph)" fx:id="avgSpeed" prefWidth="150.0" styleClass="row-style">
+                        <cellValueFactory><PropertyValueFactory property="avgSpeed"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Max Speed (mph)" fx:id="maxSpeed" prefWidth="150.0" styleClass="row-style">
+                        <cellValueFactory><PropertyValueFactory property="maxSpeed"/></cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <items>
+                    <FXCollections fx:factory="observableArrayList"/>
+                </items>
+            </TableView>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <fx:include source="bottomBar.fxml" fx:id="bottomBar"/>
+    </bottom>
+
+
+</BorderPane>

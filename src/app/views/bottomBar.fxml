@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane styleClass="bottom-bar" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" fx:controller="app.controllers.BottomBarController" fx:id="bottomGrid">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="33" halignment="LEFT"/>
+        <ColumnConstraints percentWidth="33" halignment="CENTER"/>
+        <ColumnConstraints percentWidth="33" halignment="RIGHT"/>
+    </columnConstraints>
+    <children>
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="0" fx:id="left"/>
+        <Label GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="center"/>
+        <Button GridPane.columnIndex="2" GridPane.rowIndex="0" text="Turn Off" fx:id="logoutButton" onAction="#turnOff"/>
+        <!--<Label GridPane.columnIndex="2" GridPane.rowIndex="0" text="Right" fx:id="right"/>-->
+    </children>
+</GridPane>

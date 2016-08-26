@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane styleClass="top-bar" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" fx:controller="app.controllers.TopBarController">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="33" halignment="LEFT"/>
+        <ColumnConstraints percentWidth="33" halignment="CENTER"/>
+        <ColumnConstraints percentWidth="33" halignment="RIGHT"/>
+    </columnConstraints>
+    <children>
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="0" fx:id="left" onMouseClicked="#handleLeftClick"/>
+        <Label GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="time"/>
+        <Label GridPane.columnIndex="2" GridPane.rowIndex="0" fx:id="right"/>
+    </children>
+</GridPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+
+
+<BorderPane fx:id="routeView" fx:controller="app.controllers.RouteController" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <fx:include source="topBar.fxml" fx:id="topBar"/>
+    </top>
+
+    <center>
+        <VBox fx:id="centerView" alignment="CENTER" spacing="50" styleClass="inner" style="-fx-background-image: url('app/views/images/map.png'); -fx-background-position: center;">
+            <Slider fx:id="slider"/>
+            <GridPane alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50" halignment="LEFT"/>
+                    <ColumnConstraints percentWidth="50" halignment="RIGHT"/>
+                </columnConstraints>
+                <children>
+                    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="black" text="0 miles"/>
+                    <Label GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="black" text="300 miles"/>
+                </children>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <bottom>
+        <fx:include source="bottomBar.fxml" fx:id="bottomBar"/>
+    </bottom>
+</BorderPane>

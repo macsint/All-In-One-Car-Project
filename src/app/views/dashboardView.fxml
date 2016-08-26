@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" fx:controller="app.controllers.DashboardController" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased">
+    <top>
+        <fx:include source="topBar.fxml" fx:id="topBar"/>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="100">
+            <HBox spacing="100" alignment="CENTER">
+                <VBox alignment="CENTER">
+                    <Label fx:id="speedLabel" styleClass="large-label"/>
+                    <Label text="mph" styleClass="medium-label"/>
+                </VBox>
+                <Label fx:id="lowFuel" styleClass="medium-label" prefWidth="150"/>
+                <VBox alignment="CENTER">
+                    <Label fx:id="milesLeftLabel" styleClass="large-label"/>
+                    <Label text="miles left" styleClass="medium-label"/>
+                </VBox>
+            </HBox>
+            <HBox styleClass="dashboard-icons" alignment="CENTER" spacing="50">
+                <VBox alignment="CENTER" fx:id="radioBox" onMouseClicked="#handleRadioClick">
+                    <Label fx:id="radio"/>
+                    <Label text="Radio" styleClass="icon-label"/>
+                </VBox>
+                <VBox alignment="CENTER" fx:id="phoneBox" onMouseClicked="#handlePhoneClick">
+                    <Label fx:id="phone"/>
+                    <Label text="Phone" styleClass="icon-label"/>
+                </VBox>
+                <VBox alignment="CENTER" onMouseClicked="#handleRouteClick">
+                    <Label fx:id="routes"/>
+                    <Label text="Routes" styleClass="icon-label"/>
+                </VBox>
+                <VBox alignment="CENTER" onMouseClicked="#handleInfoClick">
+                    <Label fx:id="info"/>
+                    <Label text="Info" styleClass="icon-label"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <fx:include source="bottomBar.fxml" fx:id="bottomBar"/>
+    </bottom>
+
+
+</BorderPane>
