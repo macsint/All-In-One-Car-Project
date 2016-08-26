@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #CSE360 Group Project
 ##All-In-One Driving Software System
 
@@ -33,3 +34,7 @@ All passwords are `password`
 Tests are setup to be ran as one folder, hence the A_Setup test file to launch the application for testing. Right click `tests` folder and pick the following option to run test suite:
 
 ![](http://s11.postimg.org/ighkud9cz/Screen_Shot_2015_12_02_at_10_49_30_PM.png)
+=======
+# All-In-One-Car-Project
+Project developed in Java for the CSE 360 class at Arizona State University
+>>>>>>> f3e1cbcba64af64a22f0118a1c32580542f4d9b5
